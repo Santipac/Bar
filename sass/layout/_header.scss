@@ -1,0 +1,38 @@
+.header{
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(29, 29, 27, 0.728), rgba(31, 31, 31, 0.67)), url(/img/bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+
+    &__hero{
+        height: calc(100vh - 12vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+}
+.nav{
+    min-height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__logo{
+        img{
+            width: 9rem;
+        }
+    }
+    &__navigation{
+        display: flex;
+        list-style: none;
+        &-links{
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 2rem;
+            color: $white-color;
+            &:hover{
+                color: $gold-color;
+            }
+        }
+    }
+}

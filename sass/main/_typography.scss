@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+
+.header__hero-titles{
+    padding: 0 4rem;
+    color: $white-color;
+    &--1{
+        color: #d39145;
+        font-size: 7rem;
+        font-weight: 700;
+        text-align: center;
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+    }
+    &--2{
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 400;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+    }
+
+}
