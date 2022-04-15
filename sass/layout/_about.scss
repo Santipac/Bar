@@ -7,7 +7,7 @@
     
     &__info-titles{
         background-color: rgba($dark-gold-color, 0.7);
-        padding: 3rem;
+        padding: 5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -26,6 +26,7 @@
         }
     }
     &__images{
+        padding: 2rem;
         &--1{
             width: 100%;
             
