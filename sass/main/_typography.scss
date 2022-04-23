@@ -23,5 +23,97 @@ body{
         animation-name: moveInRight;
         animation-duration: 2s;
     }
+}
+
+.beer__info-titles{
+    &--1{
+        text-align: center;
+        margin-bottom: 2.3rem;
+        font-weight: 700;
+        font-size: 5rem;
+        color: $gold-color;
+    }
+    &--2,
+    &--3{
+        margin: 2rem 0;
+        text-align: justify;
+        font-size: 2.3rem;
+        color: $white-color;
+        font-weight: 400;
+        span{
+            color: $gold-color;
+        }
+    }
+}
+
+.footer{
+    padding: 3rem;
+    &__medias{
+        &-title{
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            color: rgba($gold-color, 0.7);
+            font-size: 3rem;
+        }
+        &-icons a{
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 3rem;
+            color: rgba($white-color, 0.8);
+        }
+    }
+    &__contact{
+        &-titles{
+            &--1{
+                text-align: center;
+                color: rgba($gold-color, 0.7);
+                font-size: 2.3rem;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+            &--p-1{
+                color: rgba($white-color, 0.8);
+                font-size: 1.8rem;
+                
+                span{
+                    font-weight: 500;
+                    color: $gold-color;
+                    padding-left: 1rem;
+                }
+            }
+            &--p-2{
+                color: rgba($white-color, 0.8);
+                font-size: 1.8rem;
+                span{
+                    padding-left: 1rem;
+                    font-weight: 500;
+                    color: $gold-color;
+                }
+            }
+        }
+    }
+    &__navigation{
+
+        &-nav{
+            display: flex;
+            flex-direction: column;
+            &--title{
+                text-align: center;
+                font-weight: 400;
+                color: rgba($gold-color, 0.7);
+                font-size: 3rem;
+            }
+            a{
+                align-self: center;
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: rgba($white-color, 0.8);
+                &:hover{
+                    color: rgba($gold-color, 0.7);
+                }
+            } 
+        }
+    }
 
 }

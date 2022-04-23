@@ -5,19 +5,10 @@
     border-radius: 50rem;
 }
 */
-#icon{
-    
-    display: none;
-    color: $white-color;
-    font-size: 3.2rem;
-    cursor: pointer;
-}
+
 
 @media only screen and (max-width: $bp-large){
-    #icon{
-        
-        display: block;
-}
+
     .nav__navigation-links{
         display: none;
     }

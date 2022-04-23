@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -143,17 +144,7 @@ animation: moveInBottom .5s ease-out .75s;
     border-radius: 50rem;
 }
 */
-#icon {
-  display: none;
-  color: #f8f9fa;
-  font-size: 3.2rem;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 48rem) {
-  #icon {
-    display: block;
-  }
   .nav__navigation-links {
     display: none;
   }
@@ -189,12 +180,188 @@ body {
           animation-duration: 2s;
 }
 
+.beer__info-titles--1 {
+  text-align: center;
+  margin-bottom: 2.3rem;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #d39145;
+}
+
+.beer__info-titles--2, .beer__info-titles--3 {
+  margin: 2rem 0;
+  text-align: justify;
+  font-size: 2.3rem;
+  color: #f8f9fa;
+  font-weight: 400;
+}
+
+.beer__info-titles--2 span, .beer__info-titles--3 span {
+  color: #d39145;
+}
+
+.footer {
+  padding: 3rem;
+}
+
+.footer__medias-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: rgba(211, 145, 69, 0.7);
+  font-size: 3rem;
+}
+
+.footer__medias-icons a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 3rem;
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.footer__contact-titles--1 {
+  text-align: center;
+  color: rgba(211, 145, 69, 0.7);
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.footer__contact-titles--p-1 {
+  color: rgba(248, 249, 250, 0.8);
+  font-size: 1.8rem;
+}
+
+.footer__contact-titles--p-1 span {
+  font-weight: 500;
+  color: #d39145;
+  padding-left: 1rem;
+}
+
+.footer__contact-titles--p-2 {
+  color: rgba(248, 249, 250, 0.8);
+  font-size: 1.8rem;
+}
+
+.footer__contact-titles--p-2 span {
+  padding-left: 1rem;
+  font-weight: 500;
+  color: #d39145;
+}
+
+.footer__navigation-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__navigation-nav--title {
+  text-align: center;
+  font-weight: 400;
+  color: rgba(211, 145, 69, 0.7);
+  font-size: 3rem;
+}
+
+.footer__navigation-nav a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.footer__navigation-nav a:hover {
+  color: rgba(211, 145, 69, 0.7);
+}
+
 .header {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(29, 29, 27, 0.728)), to(rgba(31, 31, 31, 0.67))), url(/img/bg.jpg);
   background-image: linear-gradient(to right bottom, rgba(29, 29, 27, 0.728), rgba(31, 31, 31, 0.67)), url(/img/bg.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2.5rem;
+}
+
+.header .nav__logo {
+  width: 9rem;
+}
+
+.header .nav .hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.header .nav .hamburger:focus {
+  outline: none;
+}
+
+.header .nav__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.header .nav__navigation-links {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #f8f9fa;
+}
+
+.header .nav__navigation-links:hover {
+  color: #d39145;
+}
+
+@media (max-width: 768px) {
+  .header .nav__navigation {
+    padding-top: 2rem;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .header .nav .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .nav .hamburger {
+    display: block;
+  }
 }
 
 .header__hero {
@@ -212,40 +379,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.nav {
-  min-height: 12vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.nav__logo img {
-  width: 9rem;
-}
-
-.nav__navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
-
-.nav__navigation-links {
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #f8f9fa;
-}
-
-.nav__navigation-links:hover {
-  color: #d39145;
 }
 
 .about {
@@ -330,26 +463,6 @@ body {
           justify-content: center;
 }
 
-.beer__info-titles--1 {
-  text-align: center;
-  margin-bottom: 2.3rem;
-  font-weight: 700;
-  font-size: 5rem;
-  color: #d39145;
-}
-
-.beer__info-titles--2, .beer__info-titles--3 {
-  margin: 2rem 0;
-  text-align: justify;
-  font-size: 2.3rem;
-  color: #f8f9fa;
-  font-weight: 400;
-}
-
-.beer__info-titles--2 span, .beer__info-titles--3 span {
-  color: #d39145;
-}
-
 .beer__images {
   padding: 2rem;
 }
@@ -367,6 +480,27 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+  }
+}
+
+.footer {
+  min-height: 30vh;
+  background-color: #1e0d08;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

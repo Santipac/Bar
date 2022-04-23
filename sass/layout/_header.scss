@@ -3,7 +3,62 @@
     background-image: linear-gradient(to right bottom, rgba(29, 29, 27, 0.728), rgba(31, 31, 31, 0.67)), url(/img/bg.jpg) ;
     background-size: cover;
     background-position: center;
+    
+    
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2.5rem;
+        &__logo{
+            width: 9rem;
+        }
+        .hamburger{
+            display: none;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 3rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+        }
 
+        &__navigation{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            &-links{
+                display: inline-block;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                font-size: 2rem;
+                color: $white-color;
+                &:hover{
+                color: $gold-color;
+                }
+            }
+        }
+        @media (max-width: 768px){
+            &__navigation{
+                padding-top: 2rem;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .active{
+                display: flex;
+                
+            }
+            .hamburger{
+                display: block;
+            }
+        }
+    }
     &__hero{
         height: calc(100vh - 12vh);
         display: flex;
@@ -11,28 +66,8 @@
         justify-content: center;
         align-items: center;
         }
+
+        
 }
-.nav{
-    min-height: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    &__logo{
-        img{
-            width: 9rem;
-        }
-    }
-    &__navigation{
-        display: flex;
-        list-style: none;
-        &-links{
-            margin: 0 1rem;
-            text-decoration: none;
-            font-size: 2rem;
-            color: $white-color;
-            &:hover{
-                color: $gold-color;
-            }
-        }
-    }
-}
+
+
