@@ -15,18 +15,18 @@ body {
   background: #281513;
 }
 
-@media only screen and (max-width: 62.5rem) {
-  html {
-    font-size: 50%;
-  }
-}
+/*
+@media only screen and (max-width: $bp-longest){
+    html{
+        font-size: 50%;
+    }
 
-@media only screen and (max-width: 62.5rem) and (max-width: 375px) {
-  html {
-    font-size: 45%;
-  }
+    @media only screen and (max-width: 375px){
+    html{
+        font-size: 45%;
+    }
 }
-
+*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -43,7 +43,6 @@ body {
             transform: translateX(0) rotateX(0deg);
   }
 }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -161,7 +160,7 @@ body {
 
 .header__hero-titles--1 {
   color: #d39145;
-  font-size: 7rem;
+  font-size: clamp(3.5rem, 6vw, 7rem);
   font-weight: 700;
   text-align: center;
   -webkit-animation-name: moveInLeft;
@@ -172,7 +171,7 @@ body {
 
 .header__hero-titles--2 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: clamp(2.4rem, 2vw, 3.5rem);
   font-weight: 400;
   -webkit-animation-name: moveInRight;
           animation-name: moveInRight;
@@ -180,18 +179,48 @@ body {
           animation-duration: 2s;
 }
 
+.about__info-titles {
+  background-color: rgba(40, 21, 19, 0.7);
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__info-titles--1 {
+  text-align: center;
+  margin-bottom: 2.3rem;
+  font-weight: 700;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  color: #d39145;
+}
+
+.about__info-titles--2 {
+  text-align: justify;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  color: #f8f9fa;
+  font-weight: 400;
+}
+
 .beer__info-titles--1 {
   text-align: center;
   margin-bottom: 2.3rem;
   font-weight: 700;
-  font-size: 5rem;
+  font-size: clamp(3.2rem, 5vw, 5rem);
   color: #d39145;
 }
 
 .beer__info-titles--2, .beer__info-titles--3 {
   margin: 2rem 0;
   text-align: justify;
-  font-size: 2.3rem;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
   color: #f8f9fa;
   font-weight: 400;
 }
@@ -303,7 +332,7 @@ body {
 }
 
 .header .nav__logo {
-  width: 9rem;
+  width: clamp(6rem, 5vw, 17rem);
 }
 
 .header .nav .hamburger {
@@ -311,7 +340,7 @@ body {
   background-color: transparent;
   border: none;
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(2.4rem, 4vw, 5rem);
   padding: 1rem 2rem;
   cursor: pointer;
 }
@@ -334,7 +363,7 @@ body {
   display: inline-block;
   padding: 1rem 2rem;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 4vw, 2.7rem);
   color: #f8f9fa;
 }
 
@@ -391,36 +420,6 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-}
-
-.about__info-titles {
-  background-color: rgba(40, 21, 19, 0.7);
-  padding: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about__info-titles--1 {
-  text-align: center;
-  margin-bottom: 2.3rem;
-  font-weight: 700;
-  font-size: 5rem;
-  color: #d39145;
-}
-
-.about__info-titles--2 {
-  text-align: justify;
-  font-size: 2.3rem;
-  color: #f8f9fa;
-  font-weight: 400;
 }
 
 .about__images {
@@ -481,27 +480,6 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-  }
-}
-
-.footer {
-  min-height: 30vh;
-  background-color: #1e0d08;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-}
-
-@media only screen and (max-width: 500px) {
-  .footer {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-gap: 4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

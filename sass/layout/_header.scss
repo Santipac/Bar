@@ -12,14 +12,14 @@
         justify-content: space-between;
         padding: 2.5rem;
         &__logo{
-            width: 9rem;
+            width: clamp(6rem, 5vw, 17rem);
         }
         .hamburger{
             display: none;
             background-color: transparent;
             border: none;
             color: #fff;
-            font-size: 3rem;
+            font-size: clamp(2.4rem, 4vw, 5rem);
             padding: 1rem 2rem;
             cursor: pointer;
             &:focus{
@@ -35,7 +35,7 @@
                 display: inline-block;
                 padding: 1rem 2rem;
                 text-decoration: none;
-                font-size: 2rem;
+                font-size: clamp(1.2rem, 4vw, 2.7rem);
                 color: $white-color;
                 &:hover{
                 color: $gold-color;
