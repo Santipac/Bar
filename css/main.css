@@ -272,6 +272,8 @@ body {
 
 .header .nav__logo {
   width: clamp(6rem, 5vw, 17rem);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header .nav .hamburger {
@@ -418,6 +420,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.about__container--2 .about__container-text {
+  margin: 1.5rem 0;
+}
+
 @media (min-width: 1024px) {
   .about__container {
     display: -ms-grid;
@@ -445,38 +451,58 @@ body {
 }
 
 .footer {
-  height: 30vh;
-  background-color: #221510;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .footer__info {
   margin-top: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
 }
 
 .footer__info h2 {
-  font-size: 3rem;
+  font-size: clamp(3.5rem, 6vw, 4.5rem);
   color: #d39145;
 }
 
 .footer__info--icons {
   margin-top: 1.5rem;
+}
+
+.footer__info--icons a svg {
+  margin: 0 .3rem;
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  color: #f8f9fa;
+}
+
+.footer__contact {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer__contact h2 {
+  font-size: clamp(3.5rem, 6vw, 4.5rem);
+  color: #d39145;
+  text-align: center;
+}
+
+.footer__contact--child {
+  padding: .5rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,11 +512,80 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #f8f9fa;
 }
 
-.footer__info--icons a svg {
-  margin: 0 .3rem;
-  height: 2.3rem;
+.footer__contact--child p {
+  margin: 0 .5rem;
+}
+
+.footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__navigation h2 {
+  font-size: clamp(3.5rem, 6vw, 4rem);
+  color: #d39145;
+}
+
+.footer__navigation a {
+  text-decoration: none;
   color: #f8f9fa;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+@media (min-width: 1023px) {
+  .footer {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .footer__info {
+    margin-bottom: 10rem;
+  }
+}
+
+footer {
+  background-color: #221510;
+}
+
+footer .plus-info {
+  padding: 3rem 2rem;
+}
+
+footer .plus-info .rights {
+  text-align: center;
+  color: #f8f9fa;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+footer .plus-info .profile {
+  text-align: center;
+  color: #f8f9fa;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+footer .plus-info .profile a {
+  text-decoration: none;
+  color: #d39145;
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */
