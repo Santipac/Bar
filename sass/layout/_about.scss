@@ -40,7 +40,7 @@
         align-self: flex-end;
     }
     &__container--2{
-        margin-bottom: 8rem;
+        padding-bottom: 8rem;
         .about__container-text{
             margin: 1.5rem 0;
         }
@@ -61,6 +61,7 @@
     }
 
     .about__container--1{
+        margin-top: 3rem;
         .about__container-text{
             grid-column: 2 / -1;
             margin-left: 4rem;
@@ -75,5 +76,6 @@
             text-align: end;
             max-width: 80%;
         }
+        padding-bottom: 0;
     }
 }
