@@ -1,75 +1,65 @@
-.header{
+.hero{
     height: 100vh;
     background-image: linear-gradient(to right bottom, rgba(29, 29, 27, 0.528), rgba(31, 31, 31, 0.47)), url(/img/bg.jpg) ;
-    background-size: cover;
     background-position: center;
-    
-    
-    .nav{
+    background-size: cover;
+    padding: 3rem 2rem;
+    .header{
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: space-between;
-        padding: 2.5rem;
-        &__logo{
+        align-items: center;
+        .logo{
             width: clamp(6rem, 5vw, 17rem);
-            object-fit: cover;
-            
         }
-        .hamburger{
-            display: none;
-            background-color: transparent;
-            border: none;
-            color: #fff;
-            font-size: clamp(2.4rem, 4vw, 5rem);
-            padding: 1rem 2rem;
-            cursor: pointer;
-            &:focus{
-                outline: none;
-            }
-        }
-
-        &__navigation{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            &-links{
-                display: inline-block;
-                padding: 1rem 2rem;
-                text-decoration: none;
-                font-size: clamp(1.2rem, 4vw, 2.7rem);
-                color: $white-color;
-                &:hover{
-                color: $gold-color;
+        nav {
+            position: fixed;
+            right: 0;
+            top: 0;
+            background: $dark-brown-color;
+            height: 100vh;
+            width: 50%;
+            z-index: 999;
+            text-transform: uppercase;
+            transform: translateX(100%);
+            transition: transform .5s ease-in-out;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 8em;
+                
+                a{
+                    margin-left: 2rem;
+                    font-size: 2rem;
+                    color: $white-color;
+                    padding: .75em;
+                    display: block;
+                    text-decoration: none;
+                    font-weight: 700;
+                    &:hover {
+                        background: rgb(235, 235, 235);
+                    }
                 }
             }
-        }
-        @media (max-width: 768px){
-            &__navigation{
-                padding-top: 2rem;
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            .active{
-                display: flex;
-                
-            }
-            .hamburger{
-                display: block;
+        
+            .close {
+                float: right;
+                margin: 2.3em 2.3em;
             }
         }
-    }
-    &__hero{
-        height: calc(100vh - 12vh);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            .open-nav{
+                transform: translateX(0%) ;
+            }
+            
         }
 
-        
+    .hero__titles{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 

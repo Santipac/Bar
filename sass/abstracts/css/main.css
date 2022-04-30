@@ -153,12 +153,12 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.hero__titles {
+.header__hero-titles {
   padding: 0 4rem;
   color: #f8f9fa;
 }
 
-.hero__titles--1 {
+.header__hero-titles--1 {
   color: #d39145;
   font-size: clamp(3.8rem, 6vw, 7rem);
   font-weight: 700;
@@ -169,7 +169,7 @@ body {
           animation-duration: 2s;
 }
 
-.hero__titles--2 {
+.header__hero-titles--2 {
   text-align: center;
   font-size: clamp(2.3rem, 2vw, 3.5rem);
   font-weight: 400;
@@ -247,80 +247,96 @@ body {
   color: #f8f9fa;
 }
 
-.hero {
+.header {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(29, 29, 27, 0.528)), to(rgba(31, 31, 31, 0.47))), url(/img/bg.jpg);
   background-image: linear-gradient(to right bottom, rgba(29, 29, 27, 0.528), rgba(31, 31, 31, 0.47)), url(/img/bg.jpg);
-  background-position: center;
   background-size: cover;
-  padding: 3rem 2rem;
+  background-position: center;
 }
 
-.hero .header {
+.header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5rem;
 }
 
-.hero .header .logo {
+.header .nav__logo {
   width: clamp(6rem, 5vw, 17rem);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.hero .header nav {
-  position: fixed;
-  right: 0;
-  top: 0;
-  background: #221510;
-  height: 100vh;
-  width: 50%;
-  z-index: 999;
-  text-transform: uppercase;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+.header .nav .hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: clamp(2.4rem, 4vw, 5rem);
+  padding: 1rem 2rem;
+  cursor: pointer;
 }
 
-.hero .header nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 8em;
+.header .nav .hamburger:focus {
+  outline: none;
 }
 
-.hero .header nav ul a {
-  margin-left: 2rem;
-  font-size: 2rem;
-  color: #f8f9fa;
-  padding: .75em;
-  display: block;
+.header .nav__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.header .nav__navigation-links {
+  display: inline-block;
+  padding: 1rem 2rem;
   text-decoration: none;
-  font-weight: 700;
+  font-size: clamp(1.2rem, 4vw, 2.7rem);
+  color: #f8f9fa;
 }
 
-.hero .header nav ul a:hover {
-  background: #ebebeb;
+.header .nav__navigation-links:hover {
+  color: #d39145;
 }
 
-.hero .header nav .close {
-  float: right;
-  margin: 2.3em 2.3em;
+@media (max-width: 768px) {
+  .header .nav__navigation {
+    padding-top: 2rem;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .header .nav .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .nav .hamburger {
+    display: block;
+  }
 }
 
-.hero .header .open-nav {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.hero .hero__titles {
-  height: 100%;
+.header__hero {
+  height: calc(100vh - 12vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,13 +344,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about {

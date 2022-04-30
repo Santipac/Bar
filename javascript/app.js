@@ -1,6 +1,11 @@
-const hamburger = document.querySelector("#hamburger");
-const navUL = document.querySelector("#nav-ul");
+const menu = document.querySelector('.menu')
+            const close = document.querySelector('.close')
+            const nav = document.querySelector('nav')
 
-hamburger.addEventListener('click', () =>{
-    navUL.classList.toggle('active');
-} )
+            menu.addEventListener('click', () => {
+                nav.classList.add('open-nav')
+            })
+
+            close.addEventListener('click', () => {
+                nav.classList.remove('open-nav')
+            })
