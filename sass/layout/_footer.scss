@@ -37,7 +37,7 @@
             text-align: center;
         }
         &--child{
-            padding: .5rem 0;
+            padding: 1rem;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             display: flex;
             justify-content: center;
@@ -45,6 +45,9 @@
             color: $white-color;
             p{
                 margin: 0 .5rem;
+            }
+            &:last-child{
+                padding-bottom: 0;
             }
         }
     }
@@ -61,7 +64,9 @@
             color: $gold-color;
         }
         a{
-            
+            &:not(a:first-child){
+                padding-top: 1rem;
+            }
             text-decoration: none;
             color: $white-color;
             font-size: clamp(1.8rem, 5vw, 2.5rem);

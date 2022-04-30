@@ -507,7 +507,7 @@ body {
 }
 
 .footer__contact--child {
-  padding: .5rem 0;
+  padding: 1rem;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,6 +523,10 @@ body {
 
 .footer__contact--child p {
   margin: 0 .5rem;
+}
+
+.footer__contact--child:last-child {
+  padding-bottom: 0;
 }
 
 .footer__navigation {
@@ -550,6 +554,10 @@ body {
   text-decoration: none;
   color: #f8f9fa;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.footer__navigation a:not(a:first-child) {
+  padding-top: 1rem;
 }
 
 @media (min-width: 1023px) {
