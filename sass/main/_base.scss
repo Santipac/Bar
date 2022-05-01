@@ -10,15 +10,31 @@ html{
 body{
     background: $dark-gold-color;
 }
-/*
-@media only screen and (max-width: $bp-longest){
-    html{
-        font-size: 50%;
-    }
 
-    @media only screen and (max-width: 375px){
-    html{
-        font-size: 45%;
-    }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #d39145 #ffffff;
 }
-*/
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+}
+
+  *::-webkit-scrollbar-track {
+    background: $dark-gold-color;
+}
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $gold-color;
+    border-radius: none;
+    border: 3px none #ffffff;
+}
+
+
+
+
+
+

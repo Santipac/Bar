@@ -34,13 +34,12 @@
                     padding: .75em;
                     display: block;
                     text-decoration: none;
-                    font-weight: 700;
+                    font-weight: 400;
                     &:hover {
                         background: rgb(235, 235, 235);
                     }
                 }
             }
-        
             .close {
                 float: right;
                 margin: 2.3em 2.3em;
@@ -49,17 +48,33 @@
             .open-nav{
                 transform: translateX(0%) ;
             }
+
+
+            @media screen and (min-width: $bp-tablet){
+                .menu, .close{
+                    display: none;
+                }
+                nav{
+                    height: auto;
+                    width: auto;
+                    background-color: transparent;
+                    position: static;
+                    transform: translate(0);
+                    
+                    ul{
+                        margin: 0;
+                        display: flex;
             
-        }
-
-    .hero__titles{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+                        a{
+                            text-transform: none;
+                            &:hover{
+                                background: transparent;
+                                color: $gold-color;
+                            }
+                        }
+                    }
+                }
+            }
     }
+
 }
-
-
