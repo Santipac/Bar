@@ -1,15 +1,13 @@
 // ABSTRACTS
-@import "./abstracts/mixins";
 @import "./abstracts/variables";
 
 // MAIN 
 @import "./main/base";
 @import "./main/animations";
-@import "./main/utilities";
 @import "./main/typography";
 
 //LAYOUT
 @import "./layout/header";
 @import "./layout/about";
-//@import "./layout/beer";
+@import "./layout/menu";
 @import "./layout/footer";

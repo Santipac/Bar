@@ -1,0 +1,42 @@
+.menu{
+    height: min-content;
+    background-color: #362118;
+    display: grid;
+    grid-template-rows: repeat(4, min-content); 
+    gap: 4rem;
+    padding: 3rem;
+
+
+    article{
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+
+        .product{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: .7rem 0;
+
+            .info-product{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+        }
+    }
+
+
+    
+
+}
+
+@media(min-width: 768px){
+    .menu{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    grid-template-rows: none;
+    }
+
+}

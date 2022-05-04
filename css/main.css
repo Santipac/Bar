@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400&family=Roboto:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -147,8 +148,12 @@ animation: moveInBottom .5s ease-out .75s;
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0; }
 */
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .hero .header a {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
 }
 
@@ -176,7 +181,6 @@ animation: moveInBottom .5s ease-out .75s;
   color: #d39145;
   font-size: clamp(3.8rem, 6vw, 7rem);
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
   text-align: center;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
@@ -187,8 +191,7 @@ animation: moveInBottom .5s ease-out .75s;
 .hero__titles--2 {
   text-align: center;
   font-size: clamp(2.3rem, 2vw, 3.5rem);
-  font-weight: 300;
-  font-family: "Libre Franklin", sans-serif;
+  font-weight: 500;
   -webkit-animation-name: moveInRight;
           animation-name: moveInRight;
   -webkit-animation-duration: 2s;
@@ -211,25 +214,38 @@ animation: moveInBottom .5s ease-out .75s;
   font-size: clamp(2.3rem, 7vw, 4.5rem);
   margin-bottom: 1rem;
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
 }
 
 .about__container-text p {
   color: #f8f9fa;
   font-size: clamp(1.6rem, 4vw, 2.3rem);
   font-weight: 300;
-  font-family: "Libre Franklin", sans-serif;
   line-height: 1.6;
 }
 
+.menu article .title {
+  font-size: clamp(2.8rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: #d39145;
+}
+
+.menu article .product {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.menu article .product .info-product .ingredients {
+  font-size: clamp(0.8rem, 5vw, 1.4rem);
+  font-weight: 500;
+}
+
 footer .footer h2 {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
 footer .footer p {
-  font-family: "Libre Franklin", sans-serif;
-  font-family: 300;
+  font-weight: 300;
 }
 
 footer .footer__info h2 {
@@ -284,7 +300,6 @@ footer .footer__navigation h2 {
 footer .footer__navigation a {
   text-decoration: none;
   color: #f8f9fa;
-  font-family: "Libre Franklin", sans-serif;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
@@ -300,12 +315,10 @@ footer .plus-info .rights {
   text-align: center;
   color: #f8f9fa;
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 footer .plus-info .profile {
-  font-family: "Libre Franklin", sans-serif;
   text-align: center;
   color: #f8f9fa;
   font-weight: 300;
@@ -313,7 +326,7 @@ footer .plus-info .profile {
 }
 
 footer .plus-info .profile a {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   text-decoration: none;
   color: #d39145;
   font-weight: 700;
@@ -495,6 +508,69 @@ footer .plus-info .profile a {
     margin-right: 4rem;
     text-align: end;
     max-width: 80%;
+  }
+}
+
+.menu {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #362118;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
+  gap: 4rem;
+  padding: 3rem;
+}
+
+.menu article {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu article .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: .7rem 0;
+}
+
+.menu article .product .info-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    -ms-grid-rows: none;
+        grid-template-rows: none;
   }
 }
 
