@@ -405,7 +405,7 @@ footer .plus-info .profile a {
 }
 
 @media screen and (min-width: 76.8em) {
-  .hero .header .menu, .hero .header .close {
+  .hero .header .toggle, .hero .header .close {
     display: none;
   }
   .hero .header nav {
