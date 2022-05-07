@@ -44,7 +44,12 @@
         align-self: center;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-        
+        &-image--1{
+            justify-content: end;
+        }
+        &-image--2{
+            justify-content: start;
+        }
     }
 
     .about__container--1{
@@ -65,12 +70,7 @@
         }
         padding-bottom: 0;
     }
-    .about--container{
-        &-image--1{
-            justify-content: end;
-        }
-        &-image--2{
-            justify-content: start;
-        }
-    }
+    
+
+    
 }
