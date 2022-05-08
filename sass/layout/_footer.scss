@@ -22,17 +22,28 @@ footer{
             display: flex;
             justify-content: center;
             flex-direction: column;
+            a{
+                padding: .3rem 0;
+                &:hover{
+                    background: transparent;
+                    color: $gold-color;
+                }
+            }
         }
     
-    
         //MEDIA QUERY
-        @media(min-width: $bp-notebook){
+        @media(min-width: 800px){
             height: min-content;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, minmax(150px, .5fr));
                 grid-template-rows: 1fr;
     
                 &__info{
                     margin-bottom:10rem;
+                }
+                &__navigation{
+                    a{
+                        padding: 0;
+                    }
                 }
         }
     }
