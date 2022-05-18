@@ -7,12 +7,14 @@
         width: 100%;
         max-height: 47.8rem;
         object-fit: cover;
+        animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     &__text{
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 0 3rem;
+        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     .box-1{
         grid-row: 1/2;

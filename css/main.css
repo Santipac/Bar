@@ -132,22 +132,84 @@ body {
   }
 }
 
-/*
-animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-    &:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    &:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
-    }
-    &:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0; }
-*/
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -357,6 +419,8 @@ footer .plus-info .profile a {
 
 .hero .header .logo {
   width: clamp(6rem, 5vw, 17rem);
+  -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .hero .header nav {
@@ -406,6 +470,11 @@ footer .plus-info .profile a {
           transform: translateX(0%);
 }
 
+.hero .header .toggle {
+  -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @media screen and (min-width: 76.8em) {
   .hero .header .toggle, .hero .header .close {
     display: none;
@@ -417,6 +486,8 @@ footer .plus-info .profile a {
     position: static;
     -webkit-transform: translate(0);
             transform: translate(0);
+    -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   .hero .header nav ul {
     margin: 0;
@@ -448,6 +519,8 @@ footer .plus-info .profile a {
   max-height: 47.8rem;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .about__text {
@@ -462,6 +535,8 @@ footer .plus-info .profile a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 3rem;
+  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .about .box-1 {
